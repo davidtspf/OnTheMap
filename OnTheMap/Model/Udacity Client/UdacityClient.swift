@@ -149,6 +149,7 @@ class UdacityClient {
                 })
                 completion(true, nil)
             } else {
+                print("hello 10")
                 completion(false, error)
             }
         }

@@ -36,6 +36,7 @@ class ViewController: UIViewController, UITextViewDelegate {
                 print("hello")
                 self.performSegue(withIdentifier: "completeLogin", sender: nil)
             } else {
+                print("hello 5")
                 self.showLoginFailure(message: error?.localizedDescription ?? "")
             }
         }
@@ -44,8 +45,10 @@ class ViewController: UIViewController, UITextViewDelegate {
     func handleSessionResponse(success: Bool, error: Error?) {
         setLoggingIn(false)
         if success {
+            print("hello 2")
             performSegue(withIdentifier: "completeLogin", sender: nil)
         } else {
+            print("hello 6")
             showLoginFailure(message: error?.localizedDescription ?? "")
         }
     }
@@ -58,7 +61,7 @@ class ViewController: UIViewController, UITextViewDelegate {
     
     func handleRequestTokenResponse(success: Bool, error: Error?) {
         if success {
-            print("hello 2")
+            print("hello 4")
             UdacityClient.login(username: self.emailTextField.text ?? "", password: self.passwordTextField.text ?? "", completion: self.handleLoginResponse(success:error:))
         }
     }

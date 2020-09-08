@@ -10,6 +10,26 @@ import Foundation
 
 struct SessionResponse: Codable {
     
+    let account: Account
+    let session: Session
+     
+    enum CodingKeys: String, CodingKey {
+        case account
+        case session
+    }
+    
+    struct Account: Codable {
+        let registered: Bool
+        let userId: String
+    }
+    
+    struct Session: Codable {
+        let id: String
+        let expiration: String
+    }
+    
+    
+    /*
     let success: Bool
     let sessionId: String
     
@@ -17,5 +37,5 @@ struct SessionResponse: Codable {
         case success
         case sessionId
     }
-    
+    */
 }

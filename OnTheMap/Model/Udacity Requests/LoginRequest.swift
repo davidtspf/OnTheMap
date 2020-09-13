@@ -9,10 +9,10 @@
 import Foundation
 
 struct UdacityRequestType: Codable {
-    var udacity: AuthenticateRequestType
+    var udacity: AuthenticationRequestType
 }
 
-struct AuthenticateRequestType: Codable {
+struct AuthenticationRequestType: Codable {
     var username: String
     var password: String
 }

@@ -138,9 +138,9 @@ class UdacityClient: UIViewController, UITextViewDelegate {
         
         let encoder = JSONEncoder()
         
-        let request = AuthenticateRequestType(username: emailTextField.text!, password: passwordTextField.text!)
+        let request = AuthenticationRequestType(username: username, password: password)
         let udacityRequest = UdacityRequestType(udacity: request)
-        let body = try encoder.encode(udacityRequest)
+        let body = try? encoder.encode(udacityRequest)
         
         taskForPOSTRequest(url: Endpoints.login.url, apiType: "Udacity", responseType: SessionResponse.self, body: body) { (response, error) in
             if let response = response {

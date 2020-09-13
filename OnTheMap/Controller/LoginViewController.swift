@@ -15,7 +15,6 @@ class ViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var webSignUp: UITextField!
-
     @IBOutlet weak var webLink: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {

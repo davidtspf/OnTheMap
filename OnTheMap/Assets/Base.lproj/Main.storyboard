@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gWP-NM-7O6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gWP-NM-7O6">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -74,10 +74,15 @@
                             <constraint firstItem="0w6-kF-x6d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="xoV-0z-jvI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outlet property="emailTextField" destination="Q5x-lJ-bLE" id="Bfe-jA-6fC"/>
+                            <outlet property="passwordTextField" destination="d3i-kg-12R" id="wC5-7S-pk9"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="jcZ-mU-Lux"/>
                     <connections>
                         <outlet property="emailTextField" destination="Q5x-lJ-bLE" id="ILl-yG-CHv"/>
+                        <outlet property="label" destination="INv-eV-Axn" id="Ya4-7B-hWO"/>
                         <outlet property="loginButton" destination="wxz-bS-fnm" id="a1B-D2-aL9"/>
                         <outlet property="passwordTextField" destination="d3i-kg-12R" id="COy-s9-JEL"/>
                         <outlet property="webLink" destination="INv-eV-Axn" id="E6m-oJ-rK6"/>

@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
-class UdacityClient {
-    
+class UdacityClient: UIViewController, UITextViewDelegate {
+        
     struct Auth {
         static var sessionId: String? = nil
         static var userId = ""
@@ -135,7 +136,11 @@ class UdacityClient {
     
     class func login(username: String, password: String, completion: @escaping (Bool, Error?) -> Void) {
         
-        let body = "{\"udacity\": {\"username\": \"\(username)\", \"password\": \"\(password)\"}}"
+        let encoder = JSONEncoder()
+        
+        let request = AuthenticateRequestType(username: emailTextField.text!, password: passwordTextField.text!)
+        let udacityRequest = UdacityRequestType(udacity: request)
+        let body = try encoder.encode(udacityRequest)
         
         taskForPOSTRequest(url: Endpoints.login.url, apiType: "Udacity", responseType: SessionResponse.self, body: body) { (response, error) in
             if let response = response {

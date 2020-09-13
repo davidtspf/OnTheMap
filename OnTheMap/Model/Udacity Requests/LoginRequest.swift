@@ -8,7 +8,11 @@
 
 import Foundation
 
-struct LoginRequest: Codable {
-    let username: String
-    let password: String
+struct UdacityRequestType: Codable {
+    var udacity: AuthenticateRequestType
+}
+
+struct AuthenticateRequestType: Codable {
+    var username: String
+    var password: String
 }
